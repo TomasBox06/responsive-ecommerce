@@ -1,0 +1,55 @@
+@use "variables" as var;
+@use "mixins" as mix;
+
+.modal-gallery {
+  width: 550px;
+  &__bg {
+    @include mix.modal-bg;
+    display: none;
+    // display: grid;
+    place-content: center;
+    @media (max-width: 800px) {
+      display: none !important;
+    }
+  }
+  &__close-container {
+    text-align: right;
+    height: 30px;
+  }
+  &__close {
+    width: 16px;
+    height: 16px;
+    &:hover {
+      cursor: pointer;
+      content: url(../../images/icon-close-orange.svg);
+    }
+  }
+  &__image-container {
+    position: relative;
+    background-image: url("../../images/image-product-1-jpg");
+    height: 446px;
+    background-size: cover;
+    border-radius: 16px;
+    margin-bottom: 32px;
+  }
+  &__thumbnails {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin: auto;
+  }
+  &__thumbnail {
+    width: 90px;
+    border-radius: 18px;
+    &:hover {
+      cursor: pointer;
+      border: 2px solid var.$orange;
+    }
+  }
+  &__previous {
+    @include mix.img-btn(190px, -15px, true);
+  }
+  &__next {
+    @include mix.img-btn(190px, 520px, true);
+  }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+
+    <script defer src="./main.js"></script>
+    <script defer src="./images.js"></script>
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="header">
+        <div class="header-navigation">
+          <img class="header-menu" src="../images/icon-menu.svg" alt="" />
+          <img class="header-logo" src="../images/logo.svg" alt="logo" />
+          <nav class="navbar">
+            <ul class="navbar-items">
+              <li><a href="#" class="navbar-link">Collections</a></li>
+              <li><a href="#" class="navbar-link">Men</a></li>
+              <li><a href="#" class="navbar-link">Women</a></li>
+              <li><a href="#" class="navbar-link">About</a></li>
+              <li><a href="#" class="navbar-link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-cart__avatar">
+          <div class="header-cart">
+            <div class="header-cart--notification"></div>
+            <img src="../images/icon-cart.svg" alt="Cart Icon" />
+          </div>
+          <img class="header-avatar" src="../images/image-avatar.png" alt="" />
+        </div>
+      </header>
+
+      <!-- Close Header -->
+
+      <!--Content-->
+
+      <section class="content">
+        <article class="gallery">
+          <div class="gallery-image__container">
+            <img
+              src="../images/icon-previous.svg"
+              class="gallery-previous"
+              alt=""
+            />
+            <img
+              src="../images/icon-next.svg"
+              class="gallery-next"
+              alt=""
+              id=""
+            />
+          </div>
+          <div class="gallery-thumbnails">
+            <img
+              id="0"
+              class="gallery-thumbnail"
+              src="../images/image-product-1-thumbnail.jpg"
+              alt="thumbnail"
+            />
+            <img
+              id="1"
+              class="gallery-thumbnail"
+              src="../images/image-product-2-thumbnail.jpg"
+              alt="thumbnail"
+            />
+            <img
+              id="2"
+              class="gallery-thumbnail"
+              src="../images/image-product-3-thumbnail.jpg"
+              alt="thumbnail"
+            />
+            <img
+              id="3"
+              class="gallery-thumbnail"
+              src="../images/image-product-4-thumbnail.jpg"
+              alt="thumbnail"
+            />
+          </div>
+        </article>
+
+        <!-- Close Content -->
+
+        <!-- Details -->
+
+        <article class="details">
+          <h2 class="details-company">Sneaker Company</h2>
+          <h2 class="details-title">Fall Limited Edition Sneakers</h2>
+          <p class="details-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="details-prices">
+            <p class="details-discount">
+              $125.00 <span class="details-percentage">50%</span>
+            </p>
+            <p class="details-before">$250.00</p>
+          </div>
+          <div class="details-product__quantity">
+            <div class="input">
+              <img
+                class="input-minus"
+                src="../images/icon-minus.svg"
+                alt="minus"
+              />
+              <input class="input-number" type="number" value="0" readonly />
+              <img
+                class="input-plus"
+                src="../images/icon-plus.svg"
+                alt="plus"
+              />
+            </div>
+            <button class="details-button">
+              <img src="../images/icon-cart-white.svg" alt="" /> Add to cart
+            </button>
+          </div>
+        </article>
+      </section>
+
+      <!-- Close Details -->
+
+      <!-- Cart Modal -->
+
+      <div class="cart-modal">
+        <p class="cart-modal__title">Cart</p>
+        <div class="cart-modal__checkout-container">
+          <div class="cart-modal__details-container">
+            <img
+              class="cart-modal__image"
+              src="../images/image-product-1-thumbnail.jpg"
+              alt=""
+            />
+            <div>
+              <p class="cart-modal__product">Autumn Limited Edition...</p>
+              <p class="cart-modal__price">$125.00 x3 <span>$375.00</span></p>
+            </div>
+            <img
+              class="cart-modal__delete"
+              src="../images/icon-delete.svg"
+              alt="delete"
+            />
+          </div>
+          <button class="cart-modal__checkout">Checkout</button>
+        </div>
+      </div>
+    </main>
+
+    <!--Modal Navbar-->
+    <div class="modal-navbar__bg">
+      <nav class="modal-navbar">
+        <img
+          src="../images/icon-close.svg"
+          alt=""
+          class="modal-navbar__close-icon"
+        />
+        <ul class="modal-navbar__items">
+          <li><a href="#" class="modal-navbar__link">Collections</a></li>
+          <li><a href="#" class="modal-navbar__link">Men</a></li>
+          <li><a href="#" class="modal-navbar__link">Women</a></li>
+          <li><a href="#" class="modal-navbar__link">About</a></li>
+          <li><a href="#" class="modal-navbar__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--Modal Navbar Close-->
+
+    <!--Modal Gallery -->
+
+    <div class="modal-gallery__bg">
+      <article class="modal-gallery">
+        <div class="modal-gallery__close-container">
+          <img
+            class="modal-gallery__close"
+            src="../images/icon-close.svg"
+            alt=""
+          />
+        </div>
+        <div class="modal-gallery__image-container">
+          <img
+            src="../images/icon-previous.svg"
+            class="modal-gallery__previous"
+            alt=""
+          />
+          <img
+            src="../images/icon-next.svg"
+            class="modal-gallery__next"
+            alt=""
+          />
+        </div>
+        <div class="modal-gallery__thumbnails">
+          <img
+            id="0"
+            class="modal-gallery__thumbnail"
+            src="../images/image-product-1-thumbnail.jpg"
+            alt="thumbnail"
+          />
+          <img
+            id="1"
+            class="modal-gallery__thumbnail"
+            src="../images/image-product-2-thumbnail.jpg"
+            alt="thumbnail"
+          />
+          <img
+            id="2"
+            class="modal-gallery__thumbnail"
+            src="../images/image-product-3-thumbnail.jpg"
+            alt="thumbnail"
+          />
+          <img
+            id="3"
+            class="modal-gallery__thumbnail"
+            src="../images/image-product-4-thumbnail.jpg"
+            alt="thumbnail"
+          />
+        </div>
+      </article>
+    </div>
+  </body>
+</html>

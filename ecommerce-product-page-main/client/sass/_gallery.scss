@@ -1,0 +1,50 @@
+@use "variables" as var;
+@use "mixins";
+
+.gallery {
+  position: relative;
+  &-image__container {
+    height: 300px;
+    width: 100%;
+    background-image: url(../../images/image-product-1.jpg);
+    background-size: cover;
+    &:hover {
+      cursor: pointer;
+    }
+    @media (min-width: 1115px) {
+      border-radius: 16px;
+      height: 446px;
+      margin-bottom: 32px;
+    }
+  }
+  &-previous {
+    @include mixins.img-btn(117.5px, 5px, false);
+    @media (min-width: 1115px) {
+      display: none;
+    }
+  }
+  &-next {
+    @include mixins.img-btn(117.5px, 330px, false);
+    @media (min-width: 1115px) {
+      display: none;
+    }
+  }
+  &-thumbnails {
+    display: none;
+    @media (min-width: 1115px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &-thumbnail {
+    width: 90px;
+    border-radius: 18px;
+    &:hover {
+      cursor: pointer;
+      border: 2px solid var.$orange;
+    }
+  }
+  @media (min-width: 1115px) {
+    width: 446px;
+  }
+}
